@@ -29,6 +29,10 @@
       "qType": "mekkochart"
     },
     {
+      "qId": "jAcw",
+      "qType": "distributionplot"
+    },
+    {
       "qId": "uuw",
       "qType": "qlik-date-picker"
     },

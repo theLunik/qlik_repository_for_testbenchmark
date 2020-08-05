@@ -1,1 +1,69 @@
-[]
+[
+  {
+    "qInfo": {
+      "qId": "590eb025-4d06-4e74-a335-cfffbf3818f1",
+      "qType": "bookmark"
+    },
+    "qMetaDef": {
+      "title": "Bookmark прямой фильтр",
+      "description": "",
+      "isBlueprintItem": true
+    },
+    "creationDate": "2020-07-22T08:23:01.904Z",
+    "sheetId": "dd5ab78f-2b77-4929-99cb-fa5a0f15da38",
+    "selectionFields": "Дата отчета, Сеть",
+    "qData": {
+      "qBookMark": {
+        "qStateData": [
+          {
+            "qStateName": "$",
+            "qFieldItems": [
+              {
+                "qDef": {
+                  "qName": "Дата отчета",
+                  "qType": "PRESENT"
+                },
+                "qSelectInfo": {
+                  "qTextSearch": ">=01.05.2020<=30.05.2020",
+                  "qRangeLo": "NaN",
+                  "qRangeHi": "NaN",
+                  "qNumberFormat": {
+                    "qType": "U",
+                    "qnDec": 10,
+                    "qUseThou": 0
+                  },
+                  "qRangeInfo": [],
+                  "qContinuousRangeInfo": []
+                },
+                "qValues": [],
+                "qExcludedValues": []
+              },
+              {
+                "qDef": {
+                  "qName": "Сеть",
+                  "qType": "PRESENT"
+                },
+                "qSelectInfo": {
+                  "qRangeLo": "NaN",
+                  "qRangeHi": "NaN",
+                  "qNumberFormat": {
+                    "qType": "U",
+                    "qnDec": 10,
+                    "qUseThou": 0
+                  },
+                  "qRangeInfo": [],
+                  "qContinuousRangeInfo": []
+                },
+                "qValues": [],
+                "qExcludedValues": []
+              }
+            ]
+          }
+        ],
+        "qUtcModifyTime": 44034.599328703705,
+        "qVariableItems": [],
+        "qPatches": []
+      }
+    }
+  }
+]

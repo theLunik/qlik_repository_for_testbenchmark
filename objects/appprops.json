@@ -2,10 +2,12 @@
   {
     "qProperty": {
       "qInfo": {
-        "qId": "65d2c2bd-ad2d-48f4-a7ef-73a6fa47d57d",
+        "qId": "ab003afc-7b34-4417-af4a-976b2b763812",
         "qType": "appprops"
       },
-      "qMetaDef": {},
+      "qMetaDef": {
+        "isBlueprintItem": true
+      },
       "sheetTitleBgColor": "",
       "sheetTitleGradientColor": "",
       "sheetTitleColor": "",

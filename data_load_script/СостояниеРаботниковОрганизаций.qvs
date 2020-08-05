@@ -1,0 +1,47 @@
+///$tab СостояниеРаботниковОрганизаций
+//Concatenate(РаботникиОрганизаций_tmp)
+СостояниеРаботниковОрганизаций:
+LOAD
+	2 as "Код типа документа",
+    date(Period,'DD.MM.YYYY') as "Дата транзакции",
+    Period,
+    //Recorder,
+    Recorder_Type,
+    //LineNumber,
+    Active,
+    Сотрудник_Key,
+    //Организация_Key,
+    //УдалитьФизЛицо_Key,
+    Состояние as "Состояние работника",
+    Состояние as "Состояние работника на данный момент",
+    date(ПериодЗавершения,'DD.MM.YYYY') as ПериодЗавершения,
+    //ПериодЗавершения,
+    СостояниеЗавершения
+//     Сотрудник@navigationLinkUrl,
+//     Организация@navigationLinkUrl
+FROM [lib://Stage-1/InformationRegister_СостояниеРаботниковОрганизаций_RecordType.qvd]
+(qvd)
+where 1=1
+// and Period < date('30.07.2020','DD.MM.YYYY')
+ and Period >= date('01.01.2007','DD.MM.YYYY')
+//and Period >= '$(vDateB)'
+and Period <= '$(vDateE)';
+
+
+left join(СостояниеРаботниковОрганизаций)
+Load
+	distinct
+    Сотрудник_Key,
+    //"Дата отчета",
+    firstsortedvalue(Должность_Key,-"Дата отчета") 				 as "Должность_Key",
+    firstsortedvalue(Организация_Key,-"Дата отчета") 			 as "Организация_Key",
+    firstsortedvalue(ПодразделениеОрганизации_Key,-"Дата отчета") as "ПодразделениеОрганизации_Key"  
+Resident "Факты по сотруднику"
+Group by Сотрудник_Key;
+
+Concatenate(РаботникиОрганизаций_tmp)
+Load
+	*
+resident СостояниеРаботниковОрганизаций;
+
+drop table СостояниеРаботниковОрганизаций;

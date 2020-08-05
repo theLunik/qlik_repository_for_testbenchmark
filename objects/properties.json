@@ -1,12 +1,13 @@
 {
-  "qTitle": "TestBenchmark",
-  "qLastReloadTime": "2020-08-05T14:14:52.412Z",
+  "qTitle": "HR.Данные по персоналу(olga)",
+  "qLastReloadTime": "2020-07-30T09:07:03.359Z",
   "qMigrationHash": "504d4e39a7133ee172fbe29aa58348b1e4054149",
   "qSavedInProductVersion": "12.602.2",
-  "qThumbnail": {},
-  "hassectionaccess": false,
-  "createdDate": "2020-08-05T13:25:48.101Z",
-  "modifiedDate": "2020-08-05T13:25:48.101Z",
+  "qThumbnail": {
+    "qUrl": "/appcontent/2ab43ffd-10f4-4fe8-96ca-f28c635c7ca3/photo_310600.jpeg"
+  },
+  "createdDate": "2020-08-04T07:46:17.836Z",
+  "modifiedDate": "2020-08-04T07:46:57.717Z",
   "published": false,
   "publishTime": "1753-01-01T00:00:00.000Z",
   "description": "",

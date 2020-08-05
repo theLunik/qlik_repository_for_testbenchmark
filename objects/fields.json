@@ -3,12 +3,12 @@
     "qIsHidden": true,
     "qIsSystem": true,
     "qName": "$Field",
-    "qCardinal": 1,
+    "qCardinal": 151,
     "qTags": [
+      "$text",
       "$key",
       "$hidden",
-      "$system",
-      "$text"
+      "$system"
     ],
     "qSrcTables": []
   },
@@ -16,12 +16,12 @@
     "qIsHidden": true,
     "qIsSystem": true,
     "qName": "$FieldNo",
-    "qCardinal": 1,
+    "qCardinal": 35,
     "qTags": [
-      "$hidden",
-      "$system",
       "$numeric",
-      "$integer"
+      "$integer",
+      "$hidden",
+      "$system"
     ],
     "qSrcTables": []
   },
@@ -29,12 +29,12 @@
     "qIsHidden": true,
     "qIsSystem": true,
     "qName": "$Fields",
-    "qCardinal": 1,
+    "qCardinal": 8,
     "qTags": [
-      "$hidden",
-      "$system",
       "$numeric",
-      "$integer"
+      "$integer",
+      "$hidden",
+      "$system"
     ],
     "qSrcTables": []
   },
@@ -44,10 +44,10 @@
     "qName": "$Info",
     "qCardinal": 1,
     "qTags": [
-      "$hidden",
-      "$system",
+      "$ascii",
       "$text",
-      "$ascii"
+      "$hidden",
+      "$system"
     ],
     "qSrcTables": []
   },
@@ -55,12 +55,12 @@
     "qIsHidden": true,
     "qIsSystem": true,
     "qName": "$Rows",
-    "qCardinal": 1,
+    "qCardinal": 8,
     "qTags": [
-      "$hidden",
-      "$system",
       "$numeric",
-      "$integer"
+      "$integer",
+      "$hidden",
+      "$system"
     ],
     "qSrcTables": []
   },
@@ -68,18 +68,369 @@
     "qIsHidden": true,
     "qIsSystem": true,
     "qName": "$Table",
-    "qCardinal": 1,
+    "qCardinal": 8,
     "qTags": [
+      "$text",
       "$key",
       "$hidden",
-      "$system",
-      "$text"
+      "$system"
     ],
     "qSrcTables": []
   },
   {
-    "qName": "Поле_1",
+    "qName": "Active",
     "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "Depth",
+    "qCardinal": 6,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "IsFolder",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "MCC_Архив",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ДолжностиОрганизаций"
+    ]
+  },
+  {
+    "qName": "MCC_Вес_Руководителя_Moco",
+    "qCardinal": 3,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "ДолжностиОрганизаций"
+    ]
+  },
+  {
+    "qName": "MCC_Город_Key",
+    "qCardinal": 11,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "MCC_НочнойГрафик",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ДолжностиОрганизаций"
+    ]
+  },
+  {
+    "qName": "MCC_Руководитель_Moco",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ДолжностиОрганизаций"
+    ]
+  },
+  {
+    "qName": "ParentName",
+    "qCardinal": 193,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "Parent_Key",
+    "qCardinal": 358,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "PathName",
+    "qCardinal": 2350,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "Period",
+    "qCardinal": 6363,
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "Recorder_Type",
+    "qCardinal": 10,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "doljnostForKeyPlan",
+    "qCardinal": 1113,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "filialForKeyPlan",
+    "qCardinal": 188,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "keyPlan",
+    "qCardinal": 110800,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику",
+      "HR план"
+    ]
+  },
+  {
+    "qName": "monthForKeyPlan",
+    "qCardinal": 20,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "podrazdelenieForKeyPlan",
+    "qCardinal": 423,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "АУП",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ДолжностиОрганизаций"
+    ]
+  },
+  {
+    "qName": "Аббр. филиала",
+    "qCardinal": 76,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Актуальность",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "БИН Филиала",
+    "qCardinal": 78,
+    "qTags": [],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "БИН филиала план",
+    "qCardinal": 77,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "HR план"
+    ]
+  },
+  {
+    "qName": "ВалютаТарифнойСтавки_Key",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "ВидДеятельности_Key",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ДолжностиОрганизаций"
+    ]
+  },
+  {
+    "qName": "ВидДоговора",
+    "qCardinal": 1,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "ВидЗанятости",
+    "qCardinal": 5,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "ВидРасчета_Key",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "Год отчета",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "ГоловнаяОрганизация@navigationLinkUrl",
+    "qCardinal": 97,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "ГоловнаяОрганизация_Key",
+    "qCardinal": 87,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "Грейд_Key",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ДолжностиОрганизаций"
+    ]
+  },
+  {
+    "qName": "Группа",
+    "qCardinal": 18,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Дата отчета",
+    "qCardinal": 576,
     "qTags": [
       "$numeric",
       "$integer",
@@ -87,7 +438,1244 @@
       "$date"
     ],
     "qSrcTables": [
-      "Таблица"
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Дата транзакции",
+    "qCardinal": 6363,
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "ДатаДоговора",
+    "qCardinal": 485,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "ДатаНачала",
+    "qCardinal": 585,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "ДатаОкончания",
+    "qCardinal": 589,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "ДатаПриемаНаРаботу",
+    "qCardinal": 2474,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "ДатаУвольнения",
+    "qCardinal": 1688,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "Должность",
+    "qCardinal": 1919,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "ДолжностиОрганизаций"
+    ]
+  },
+  {
+    "qName": "Должность план",
+    "qCardinal": 235,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "HR план"
+    ]
+  },
+  {
+    "qName": "Должность_Key",
+    "qCardinal": 1921,
+    "qTags": [
+      "$ascii",
+      "$text",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику",
+      "ДолжностиОрганизаций"
+    ]
+  },
+  {
+    "qName": "ИдентификационныйНомер",
+    "qCardinal": 82,
+    "qTags": [],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "ИндивидуальныйПредприниматель_Key",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "ИностраннаяОрганизация",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "ИспытательныйСрок",
+    "qCardinal": 4,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "Историчная Должность",
+    "qCardinal": 1598,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "Историчная Организация",
+    "qCardinal": 8,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "Историчное PathName",
+    "qCardinal": 1930,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "Историчное Подразделение",
+    "qCardinal": 502,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "Историчное Подразделение1",
+    "qCardinal": 21,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "Историчное Подразделение2",
+    "qCardinal": 191,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "Историчное Подразделение3",
+    "qCardinal": 226,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "Историчное Подразделение4",
+    "qCardinal": 167,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "Историчное Подразделение5",
+    "qCardinal": 41,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "Историчное Подразделение6",
+    "qCardinal": 0,
+    "qTags": [],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "КБЕ",
+    "qCardinal": 2,
+    "qTags": [],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "КатегорияВоинскогоУчета",
+    "qCardinal": 6,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "ДолжностиОрганизаций"
+    ]
+  },
+  {
+    "qName": "КатегорияДолжности@navigationLinkUrl",
+    "qCardinal": 1899,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "ДолжностиОрганизаций"
+    ]
+  },
+  {
+    "qName": "КатегорияДолжности_Key",
+    "qCardinal": 9,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ДолжностиОрганизаций"
+    ]
+  },
+  {
+    "qName": "Квартал отчета",
+    "qCardinal": 4,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Код типа документа",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$key"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp",
+      "Тип документа"
+    ]
+  },
+  {
+    "qName": "КодВСтранеРегистрации",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "КодЗанятия@navigationLinkUrl",
+    "qCardinal": 1894,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "ДолжностиОрганизаций"
+    ]
+  },
+  {
+    "qName": "КодЗанятия_Key",
+    "qCardinal": 3,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ДолжностиОрганизаций"
+    ]
+  },
+  {
+    "qName": "КодОКЭД",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "КодПоОКПО",
+    "qCardinal": 2,
+    "qTags": [],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "Конец месяца",
+    "qCardinal": 19,
+    "qTags": [
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Конец месяца план",
+    "qCardinal": 7,
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "HR план"
+    ]
+  },
+  {
+    "qName": "Месяц отчета",
+    "qCardinal": 12,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Месяц-Год план",
+    "qCardinal": 7,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "HR план"
+    ]
+  },
+  {
+    "qName": "НаименованиеИнострОрганизации",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "НаименованиеОКЭД",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "НаименованиеПолное",
+    "qCardinal": 94,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "НаименованиеПрофессии",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "ДолжностиОрганизаций"
+    ]
+  },
+  {
+    "qName": "НалоговыйКомитет@navigationLinkUrl",
+    "qCardinal": 27,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "НалоговыйКомитет_Key",
+    "qCardinal": 13,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "Неделя отчета",
+    "qCardinal": 53,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "НомерДоговора",
+    "qCardinal": 10,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "Оклад план",
+    "qCardinal": 345,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "HR план"
+    ]
+  },
+  {
+    "qName": "Организация",
+    "qCardinal": 98,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "Организация_Key",
+    "qCardinal": 98,
+    "qTags": [
+      "$ascii",
+      "$text",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику",
+      "Организации"
+    ]
+  },
+  {
+    "qName": "ОсновнаяКасса_Key",
+    "qCardinal": 6,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "ОсновнойБанковскийСчет_Key",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "ОсновнойВидДеятельности@navigationLinkUrl",
+    "qCardinal": 1,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "ОсновнойВидДеятельности_Key",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "Относить к штату",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "ПериодЗавершения",
+    "qCardinal": 4518,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "Подразделение",
+    "qCardinal": 686,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "Подразделение1",
+    "qCardinal": 22,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "Подразделение2",
+    "qCardinal": 207,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "Подразделение3",
+    "qCardinal": 348,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "Подразделение4",
+    "qCardinal": 191,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "Подразделение5",
+    "qCardinal": 51,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "Подразделение6",
+    "qCardinal": 2,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "ПодразделениеОрганизации_Key",
+    "qCardinal": 2367,
+    "qTags": [
+      "$ascii",
+      "$text",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику",
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "Порядок",
+    "qCardinal": 127,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "Последнее состояние на данный момент",
+    "qCardinal": 15,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Последнее состояние сотрудничества",
+    "qCardinal": 3,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Последняя Дата состояние на данный момент",
+    "qCardinal": 3630,
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Последняя Дата состояние сотрудничества",
+    "qCardinal": 3087,
+    "qTags": [
+      "$numeric",
+      "$timestamp"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "ПостфиксНаименования",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "Префикс",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "Признак приема на работу",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Признак увольнения",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "РНН",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "РаботникиОрганизаций_tmp.ГрафикРаботы_Key",
+    "qCardinal": 88,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "РаботникиОрганизаций_tmp.ТарифныйРазряд_Key",
+    "qCardinal": 1456,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "Секции Отделы ЗПТ",
+    "qCardinal": 191,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "Сеть",
+    "qCardinal": 22,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "Склады Секции Направления",
+    "qCardinal": 51,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "Состояние работника",
+    "qCardinal": 20,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "Состояние работника на данный момент",
+    "qCardinal": 17,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "Состояние сотруднечества",
+    "qCardinal": 3,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "СостояниеЗавершения",
+    "qCardinal": 2,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "Сотрудник_Key",
+    "qCardinal": 34172,
+    "qTags": [
+      "$ascii",
+      "$text",
+      "$key"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику",
+      "СотрудникиОрганизаций",
+      "РаботникиОрганизаций_tmp"
+    ]
+  },
+  {
+    "qName": "СотрудникиОрганизаций.ГрафикРаботы_Key",
+    "qCardinal": 64,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "СотрудникиОрганизаций.Должность_Key",
+    "qCardinal": 699,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "СотрудникиОрганизаций.ЗанимаемыхСтавок",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "СотрудникиОрганизаций.ИсчислятьОППВ",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "СотрудникиОрганизаций.Организация_Key",
+    "qCardinal": 8,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "СотрудникиОрганизаций.ПодразделениеОрганизации_Key",
+    "qCardinal": 1211,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "СотрудникиОрганизаций.ТарифныйРазряд_Key",
+    "qCardinal": 711,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "СтранаПостоянногоМестонахождения_Key",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "СтранаРегистрации_Key",
+    "qCardinal": 1,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "Странные склады",
+    "qCardinal": 2,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "СтруктурнаяЕдиница_Key",
+    "qCardinal": 8,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "ТК Группы Отделы",
+    "qCardinal": 348,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "ТарифнаяСтавка",
+    "qCardinal": 717,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "Текущая Должность",
+    "qCardinal": 1117,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "ТекущаяДолжностьОрганизации_Key",
+    "qCardinal": 1008,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "ТекущаяСтруктурнаяЕдиница_Key",
+    "qCardinal": 8,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "Текущее Подразделение",
+    "qCardinal": 427,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Текущее Подразделение1",
+    "qCardinal": 21,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Текущее Подразделение2",
+    "qCardinal": 188,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Текущее Подразделение3",
+    "qCardinal": 190,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Текущее Подразделение4",
+    "qCardinal": 138,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Текущее Подразделение5",
+    "qCardinal": 22,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Текущее Подразделение6",
+    "qCardinal": 0,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "ТекущееПодразделениеОрганизации_Key",
+    "qCardinal": 1689,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "Тип документа",
+    "qCardinal": 2,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Тип документа"
+    ]
+  },
+  {
+    "qName": "ФИО сотрудника",
+    "qCardinal": 29323,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "Физлицо_Key",
+    "qCardinal": 29345,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "СотрудникиОрганизаций"
+    ]
+  },
+  {
+    "qName": "Филиал",
+    "qCardinal": 82,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Филиал план",
+    "qCardinal": 80,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "HR план"
+    ]
+  },
+  {
+    "qName": "Филиалы Отделы Департаменты",
+    "qCardinal": 207,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
+    ]
+  },
+  {
+    "qName": "Числится в организации",
+    "qCardinal": 2,
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Факты по сотруднику"
+    ]
+  },
+  {
+    "qName": "Штат план",
+    "qCardinal": 59,
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "HR план"
+    ]
+  },
+  {
+    "qName": "ЮрФизЛицо",
+    "qCardinal": 2,
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Организации"
+    ]
+  },
+  {
+    "qName": "ЯвляетсяСтруктурнымПодразделением",
+    "qCardinal": 2,
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Иерархия_Подразделения"
     ]
   }
 ]

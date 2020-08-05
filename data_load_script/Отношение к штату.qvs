@@ -1,0 +1,110 @@
+///$tab Отношение к штату
+"Факты по сотруднику tmp":
+LOAD
+    Сотрудник_Key,
+    "Дата отчета",
+ //   num(month("Дата отчета"))&'-'&year("Дата отчета") as Месяц,
+ //    num(month("Дата отчета"))&'-'&year("Дата отчета") as monthForKeyPlan,
+      num(month(if("Дата отчета" = FLOOR(monthend("Дата отчета")) or "Дата отчета" = '$(vMaxRepDate)',"Дата отчета",null())))&'-'&year(if("Дата отчета" = FLOOR(monthend("Дата отчета")) or "Дата отчета" = '$(vMaxRepDate)',"Дата отчета",null())) as monthForKeyPlan,
+    if("Дата отчета" = FLOOR(monthend("Дата отчета")) or "Дата отчета" = '$(vMaxRepDate)',"Дата отчета",null()) as "Конец месяца",
+//     if("Последнее состояние сотрудничества" = 'Увольнение' 
+//     	and  FLOOR(monthend("Последняя Дата состояние сотрудничества")) = FLOOR(monthend("Дата отчета")),1,0) as "Признак увольнения на конец месяца",
+//     if("Последнее состояние сотрудничества" = 'ПриемНаРаботу' 
+//     	and  FLOOR(monthend("Последняя Дата состояние сотрудничества")) = FLOOR(monthend("Дата отчета")),1,0) as "Признак приема на работу на конец месяца",
+    week("Дата отчета") 				as "Неделя отчета",
+    month("Дата отчета") 				as "Месяц отчета",
+    Ceil(Num(month("Дата отчета"))/3) 	as "Квартал отчета",
+    year("Дата отчета") 				as "Год отчета",
+    "Признак увольнения",
+    "Признак приема на работу",
+    "Последняя Дата состояние на данный момент",
+    "Последняя Дата состояние сотрудничества",
+    "Последнее Должность_Key" 			as Должность_Key,
+    "Последнее Организация_Key" 		as Организация_Key,
+    "Последнее ПодразделениеОрганизации_Key" as ПодразделениеОрганизации_Key,
+    "Последнее состояние на данный момент",
+    "Последнее состояние сотрудничества",
+    "Относить к штату",
+    
+    if(isnull("Последнее состояние на данный момент") and "Последнее состояние сотрудничества" <> 'Увольнение', 1,  
+      if("Последнее состояние сотрудничества" <> 'Увольнение', 1,0)) as "Числится в организации"
+FROM [lib://Stage-2/Факты по сотруднику.qvd]
+(qvd);
+
+left join ("Факты по сотруднику tmp")
+LOAD
+	distinct
+    Ref_Key as Должность_Key,
+//     DataVersion,
+//     DeletionMark,
+//     Predefined,
+//     Code,
+    Description as "Текущая Должность",
+    upper(replace("Description",' ','')) as doljnostForKeyPlan
+FROM [lib://Stage-1/Catalog_ДолжностиОрганизаций.qvd]
+(qvd);
+
+
+left join ("Факты по сотруднику tmp")
+LOAD
+	distinct
+	ПодразделениеОрганизации_Key,
+    Подразделение as "Текущее Подразделение",
+    if(wildmatch(replace(upper("Подразделение"),' ',''),'ЗОНАПРИЕМКИТОВАР*'),
+        	'ЗОНАПРИЕМКИТОВАР',
+            upper("Подразделение")) as podrazdelenieForKeyPlan,
+    Подразделение1 as "Текущее Подразделение1",
+    Подразделение2 as "Текущее Подразделение2",
+    if(Подразделение1 = 'Филиальная сеть',Подразделение2,null()) as "Филиал",
+    upper(replace("Подразделение2",' ','')) as filialForKeyPlan,
+    Подразделение3 as "Текущее Подразделение3",
+    Подразделение4 as "Текущее Подразделение4",
+    Подразделение5 as "Текущее Подразделение5",
+    Подразделение6 as "Текущее Подразделение6"
+FROM [lib://Stage-2/Иерархия_ПодразделенияОрганизаций.qvd]
+(qvd);
+
+left join ("Факты по сотруднику tmp") 
+LOAD
+	distinct
+	Description as "Филиал",
+    MCC_ИдентификационныйНомер as "БИН Филиала"
+FROM [lib://Stage-1/Catalog_ПодразделенияОрганизаций.qvd]
+(qvd);
+
+left join("Факты по сотруднику tmp")
+LOAD
+    MCC_ИдентификационныйНомер as "БИН Филиала",
+    Аббревиатура as "Аббр. филиала"
+FROM [lib://File Data/mapping филиалов.xlsx]
+(ooxml, embedded labels, header is 1 lines, table is TDSheet);
+
+
+
+
+"Факты по сотруднику":
+load *,
+// 	 if(match(upper("Текущая Должность"),'АДМИНИСТРАТОР ТОРГОВОГО ЗАЛА',
+//                       'БУХГАЛТЕР ПО РАБОТЕ С ПОСТАВЩИКАМИ',
+//                       'БУХГАЛТЕР-КАЛЬКУЛЯТОР',
+//                       'ДИРЕКТОР ФИЛИАЛА',
+//                       'ЗАМЕСТИТЕЛЬ ДИРЕКТОРА ФИЛИАЛА',
+//                       'ОПЕРАТОР СПРАВОЧНОЙ СЛУЖБЫ',
+//                       'ОПЕРАЦИОННЫЙ БУХГАЛТЕР',
+//                       'РУКОВОДИТЕЛЬ НОЧНОЙ СМЕНЫ',
+//                       'УПРАВЛЯЮЩИЙ МАГАЗИНОМ'	
+// 	),AutoNumberHash128(filialForKeyPlan,doljnostForKeyPlan,monthForKeyPlan),
+//     AutoNumberHash128(filialForKeyPlan,podrazdelenieForKeyPlan,doljnostForKeyPlan,monthForKeyPlan)) as keyPlan
+//    AutoNumberHash128(filialForKeyPlan,doljnostForKeyPlan,monthForKeyPlan) as keyPlan
+    AutoNumberHash128("БИН Филиала",doljnostForKeyPlan,monthForKeyPlan) as keyPlan
+Resident "Факты по сотруднику tmp";
+
+drop table "Факты по сотруднику tmp";
+
+left join("Факты по сотруднику")
+LOAD
+	distinct
+    Группа,
+    upper(replace("Должность",' ','')) as doljnostForKeyPlan
+FROM [lib://File Data/HR плановые данные июль 2020.xlsx]
+(ooxml, embedded labels, table is [Бюджет 2020]);

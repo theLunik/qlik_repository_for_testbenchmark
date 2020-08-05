@@ -1,0 +1,51 @@
+///$tab РаботникиОрганизаций
+РаботникиОрганизаций_tmp:
+LOAD
+    //__KEY_value,
+    //date(date#(Period,'YYYY-MM-DDThh:mm:ss'),'DD.MM.YYYY') as ДатаПрием_Перемещение_Увольнение,
+    //date(Period,'DD.MM.YYYY') as Дата,
+    1 as "Код типа документа",
+    date(if(ПричинаИзмененияСостояния = 'Увольнение',Period-1,Period),'DD.MM.YYYY') as "Дата транзакции",
+    if(ПричинаИзмененияСостояния = 'Увольнение',Period-1,Period) as Period,
+    //Period,
+//     LineNumber,
+    Active,
+    Сотрудник_Key,
+    Организация_Key,
+    //УдалитьФизлицо_Key,
+//     ЗанимаемыхСтавок,
+    ПодразделениеОрганизации_Key,
+    Должность_Key,
+    ТарифныйРазряд_Key,
+    ГрафикРаботы_Key,
+//     ИсчислятьОППВ,
+//     MCC_ВидЗанятости,
+    ПричинаИзмененияСостояния as "Состояние работника",
+    ПричинаИзмененияСостояния as "Состояние сотруднечества",
+//     ОбособленноеПодразделение_Key,
+//     СтатьяЗаконаОТрудеРК,
+//     СтатьяЗаконаОТрудеРК_Type,
+//     MCC_ОсновнойСотрудник_Key,
+    //Recorder,
+    Recorder_Type
+FROM [lib://Stage-1/InformationRegister_РаботникиОрганизаций.qvd]
+(qvd)
+where 1=1
+// and Period < date('30.07.2020','DD.MM.YYYY')
+ and Period >= date('01.01.2007','DD.MM.YYYY')
+//and Period >= '$(vDateB)'
+and Period <= '$(vDateE)';
+
+// tmpMaxMin:
+// Load
+// 	min(Дата) as minDate,
+//     max(Дата) as maxDate
+// resident РаботникиОрганизаций_tmp
+// where year(Дата) <> '0001';
+
+// Let vMinDate = Peek('minDate',0,'tmpMaxMin');
+// trace $(vMinDate);
+// Let vMaxDate = Peek('maxDate',0,'tmpMaxMin');
+// trace $(vMaxDate);
+
+// drop table tmpMaxMin;

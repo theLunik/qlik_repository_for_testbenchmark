@@ -1,1 +1,64 @@
-[]
+[
+  {
+    "qInfo": {
+      "qId": "19be10d7-1e28-48fc-892d-f7ea0a4d97a2",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vДатаОтчета",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "= max([Дата отчета])",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "96e1e8fe-2b73-4b14-9c41-4c9d8cc85e35",
+      "qType": "variable"
+    },
+    "qMetaDef": {
+      "isBlueprintItem": true
+    },
+    "qName": "vMaxDate",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "109971"
+  },
+  {
+    "qInfo": {
+      "qId": "edf6ba58-62b5-4801-a087-8e04499b660b",
+      "qType": "variable"
+    },
+    "qMetaDef": {},
+    "qName": "vStaffLevel",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "1",
+    "tags": []
+  },
+  {
+    "qInfo": {
+      "qId": "fcf643fc-9535-43e3-a716-3c1182ea5f35",
+      "qType": "variable"
+    },
+    "qMetaDef": {
+      "isBlueprintItem": true
+    },
+    "qName": "vMinDate",
+    "qNumberPresentation": {
+      "qType": "U",
+      "qnDec": 10,
+      "qUseThou": 0
+    },
+    "qDefinition": "39811"
+  }
+]

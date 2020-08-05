@@ -1,0 +1,13 @@
+///$tab MasterCalendar
+MasterCalendar:
+Load
+
+Date($(vMinDate) + IterNo() - 1)    as Дата,
+month(Date($(vMinDate) + IterNo() - 1)  ) as Месяц,
+week(Date($(vMinDate) + IterNo() - 1)  ) as Неделя,
+year(Date($(vMinDate) + IterNo() - 1)  ) as Год,
+Ceil(Num(month(Date($(vMinDate) + IterNo() - 1)  ))/3) as Квартал
+
+AutoGenerate 1
+
+While $(vMinDate) + IterNo() - 1 <= $(vMaxDate);

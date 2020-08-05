@@ -1,38 +1,269 @@
 [
   {
     "qInfo": {
-      "qId": "KJKfPQ",
+      "qId": "2028e194-2425-49d8-b8f4-1357bfd584a8",
       "qType": "measure"
     },
     "qMeasure": {
-      "qLabel": "Mera1",
-      "qDef": "12",
+      "qLabel": "Елочка Принятые за период",
+      "qDef": "//count({<[ДатаПриемаНаРаботу] = {\"$(='>='&date(min([Дата отчета]))& '<='&date(max([Дата отчета])))\"}>} distinct [Сотрудник_Key]) * -1\r\ncount({<[Признак приема на работу] = {\"1\"}>} distinct [Сотрудник_Key]) * -1",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#35973e",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Елочка Принятые за период",
+      "description": "",
+      "tags": [],
+      "isBlueprintItem": true
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "BnvWbz",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Потребность",
+      "qDef": "Sum({<[Год отчета] = {\"$(=year(today()))\"}>} [Штат план])*0.95",
       "qGrouping": "N",
       "qExpressions": [],
       "qActiveExpression": 0,
       "coloring": {}
     },
     "qMetaDef": {
-      "title": "Mera1",
+      "title": "Потребность",
       "description": "",
       "tags": []
     }
   },
   {
     "qInfo": {
-      "qId": "NraEUbD",
+      "qId": "PRJCy",
       "qType": "measure"
     },
     "qMeasure": {
-      "qLabel": "Mera2",
-      "qDef": "23",
+      "qLabel": "Штат факт",
+      "qDef": "count({<[Относить к штату] = {\"1\"}, [Дата отчета] = {\"$(=date(max([Дата отчета])))\"}>} distinct [Сотрудник_Key])",
       "qGrouping": "N",
       "qExpressions": [],
       "qActiveExpression": 0,
       "coloring": {}
     },
     "qMetaDef": {
-      "title": "Mera2",
+      "title": "Штат факт",
+      "description": "",
+      "tags": [],
+      "isBlueprintItem": true
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "QsJ",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Уволенные за период",
+      "qDef": "//count({<[ДатаУвольнения] = {\"$(='>='&date(min([Дата отчета]))&'<='&date(max([Дата отчета])))\"}>} distinct [Сотрудник_Key] /*[Физлицо_Key]*/) \r\ncount({<[Признак увольнения] = {\"1\"}>} distinct [Сотрудник_Key])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#f93f17",
+          "index": 10
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Уволенные за период",
+      "description": "",
+      "tags": [],
+      "isBlueprintItem": true
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "RQaWCr",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Текучесть период",
+      "qDef": "count({<[Признак увольнения] = {\"1\"}>} distinct [Сотрудник_Key])/\r\navg(aggr(count({<[Относить к штату] = {\"1\"} >} distinct [Сотрудник_Key]), [Дата отчета]))",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qLabelExpression": "='% текучести за период'",
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Текучесть период",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "djdm",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Текучесть год",
+      "qDef": "count({1<[Признак увольнения] = {\"1\"},[Дата отчета] = {\"$(='>='&date(yearstart(max([Дата отчета])))& '<='&date(max([Дата отчета])))\"}>} distinct [Сотрудник_Key])/\r\navg(aggr(count({1<[Относить к штату] = {\"1\"}, [Дата отчета] = {\"$(='>='&date(yearstart(max([Дата отчета])))& '<='&date(max([Дата отчета])))\"} >} distinct [Сотрудник_Key]), [Дата отчета]))",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "qLabelExpression": "='% текучести с начала года'",
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Текучесть год",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "f0471d4d-7b56-4902-ad79-74d15a980a4b",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Штат по филиальной сети",
+      "qDef": "count({<[Относить к штату] = {\"1\"}, [Дата отчета] = {\"$(=date(max([Дата отчета])))\"},[Подразделение1] = {'Филиальная сеть'}>} distinct [Сотрудник_Key])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Штат по филиальной сети",
+      "description": "",
+      "tags": [],
+      "isBlueprintItem": true
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "jGVjnZ",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "План Штат",
+      "qDef": "Sum({<[Год отчета] = {\"$(=year(today()))\"}>} [Штат план])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "План Штат",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "jNpNHQn",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Кол-во вакансий",
+      "qDef": "Sum({<[Год отчета] = {\"$(=year(today()))\"}>} [Штат план]) - count({<[Относить к штату] = {\"1\"}, [Год отчета] = {\"$(=year(today()))\"}>} distinct [Сотрудник_Key])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Кол-во вакансий",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "mcAzKT",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Штат план на дату",
+      "qDef": "Sum({<[Конец месяца план] = {\"$(=max([Конец месяца план]))\"},[Год отчета] = {\"$(=year(today()))\"}>} [Штат план])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Штат план на дату",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "tSEyUB",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Укомп-сть на макс. дату",
+      "qDef": "count({<[Относить к штату] = {\"1\"},  [Дата отчета] = {\"$(=date(max([Дата отчета])))\"}>} distinct [Сотрудник_Key])/ (Sum({<[Конец месяца план] = {\"$(=date(max([Конец месяца план])))\"},[Год отчета] = {\"$(=year(today()))\"}>} [Штат план])*0.95)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Укомп-сть на макс. дату",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "ujpeY",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Приемы за период",
+      "qDef": "//count({<[ДатаПриемаНаРаботу] = {\"$(='>='&date(min([Дата отчета]))& '<='&date(max([Дата отчета])))\"}>} distinct [Сотрудник_Key]) \r\ncount({<[Признак приема на работу] = {\"1\"}>} distinct [Сотрудник_Key])",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {
+        "baseColor": {
+          "color": "#35973e",
+          "index": -1
+        }
+      }
+    },
+    "qMetaDef": {
+      "title": "Приемы за период",
+      "description": "",
+      "tags": [],
+      "isBlueprintItem": true
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "yJRLWcJ",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Укомплектованность",
+      "qDef": "count({<[Относить к штату] = {\"1\"}, [Год отчета] = {\"$(=year(today()))\"}>} distinct [Сотрудник_Key])/ (Sum({<[Год отчета] = {\"$(=year(today()))\"}>} [Штат план])*0.95)",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Укомплектованность",
       "description": "",
       "tags": []
     }

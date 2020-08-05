@@ -1,48 +1,207 @@
 [
   {
     "qInfo": {
-      "qId": "HAPjCK",
+      "qId": "1435d23a-5b8c-4524-bf4e-7e32ebd09bc5",
       "qType": "dimension"
     },
     "qDim": {
       "qGrouping": "N",
       "qFieldDefs": [
-        "Поле_1.autoCalendar.Quarter"
+        "Состояние работника на данный момент"
       ],
       "qFieldLabels": [
-        "Поле_1.Quarter"
+        "Состояние работника на данный момент"
       ],
-      "title": "Поле_1.Quarter",
+      "title": "Состояние работника на данный момент",
       "coloring": {
-        "changeHash": "0.6073615591365837"
+        "colorMapRef": "rZbncK",
+        "changeHash": "0.6853609505675053"
       }
     },
     "qMetaDef": {
-      "title": "Поле_1.Quarter",
+      "title": "Состояние работника на данный момент",
+      "description": "",
+      "tags": [],
+      "isBlueprintItem": true
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "3635a38c-a9fa-48dc-b527-9fb0ec2bc556",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "ФИО сотрудника"
+      ],
+      "qFieldLabels": [
+        "ФИО сотрудника"
+      ],
+      "title": "ФИО сотрудника",
+      "coloring": {
+        "colorMapRef": "rZbncK",
+        "changeHash": "0.8287230658266271"
+      }
+    },
+    "qMetaDef": {
+      "title": "ФИО сотрудника",
+      "description": "",
+      "tags": [],
+      "isBlueprintItem": true
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "HWRNDs",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Состояние работника"
+      ],
+      "qFieldLabels": [
+        "Состояние работника"
+      ],
+      "title": "Состояние работника",
+      "coloring": {
+        "changeHash": "0.15632774978316166"
+      }
+    },
+    "qMetaDef": {
+      "title": "Состояние работника",
+      "description": "",
+      "tags": [],
+      "isBlueprintItem": true
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "UbBfJf",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "=replace(text(class((date(vДатаОтчета) - [ДатаПриемаНаРаботу]) / 365,3)),'<= x <', '-')"
+      ],
+      "qFieldLabels": [
+        "Стаж"
+      ],
+      "qLabelExpression": "='Стаж'",
+      "title": "Стаж",
+      "coloring": {
+        "changeHash": "0.9549111249120721",
+        "colorMapRef": "UbBfJf"
+      }
+    },
+    "qMetaDef": {
+      "title": "Стаж",
       "description": "",
       "tags": []
     }
   },
   {
     "qInfo": {
-      "qId": "vQzns",
+      "qId": "c4f48664-978b-4081-a771-cc8ccd8c469d",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "H",
+      "qFieldDefs": [
+        "Дата",
+        "Неделя",
+        "Месяц",
+        "Квартал",
+        "Год"
+      ],
+      "qFieldLabels": [],
+      "title": "Дата_DrillDown",
+      "coloring": {
+        "colorMapRef": "rZbncK",
+        "changeHash": "0.013335146320701874"
+      }
+    },
+    "qMetaDef": {
+      "title": "Дата_DrillDown",
+      "description": "",
+      "tags": [],
+      "isBlueprintItem": true
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "mKpUYjA",
       "qType": "dimension"
     },
     "qDim": {
       "qGrouping": "N",
       "qFieldDefs": [
-        "Поле_1.autoCalendar.Week"
+        "Состояние сотруднечества"
       ],
       "qFieldLabels": [
-        "Поле_1.Week"
+        "Состояние сотруднечества"
       ],
-      "title": "Поле_1.Week",
+      "title": "Состояние сотруднечества",
       "coloring": {
-        "changeHash": "0.14128635027497638"
+        "changeHash": "0.6341269304206667",
+        "colorMapRef": "mKpUYjA"
       }
     },
     "qMetaDef": {
-      "title": "Поле_1.Week",
+      "title": "Состояние сотруднечества",
+      "description": "",
+      "tags": [],
+      "isBlueprintItem": true
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "rZbncK",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Текущая Должность"
+      ],
+      "qFieldLabels": [
+        "Текущая Должность"
+      ],
+      "title": "Текущая Должность",
+      "coloring": {
+        "changeHash": "0.7664969218362321",
+        "colorMapRef": "rZbncK"
+      }
+    },
+    "qMetaDef": {
+      "title": "Текущая Должность",
+      "description": "",
+      "tags": [],
+      "isBlueprintItem": true
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "rgFpXbD",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "=replace(upper(replace(replace(Филиал,'ТОО \"Magnum Cash&Carry\"',''),'ТОО \"Magnum Сash&Сarry\"','')),upper('филиал'),'Ф')\r\n"
+      ],
+      "qFieldLabels": [
+        "Филиал"
+      ],
+      "title": "Филиал",
+      "coloring": {
+        "changeHash": "0.4692361628701587"
+      }
+    },
+    "qMetaDef": {
+      "title": "Филиал",
       "description": "",
       "tags": []
     }

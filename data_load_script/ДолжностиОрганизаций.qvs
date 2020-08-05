@@ -1,0 +1,27 @@
+///$tab ДолжностиОрганизаций
+unqualify [Должность_Key];
+ДолжностиОрганизаций:
+LOAD
+    Ref_Key as Должность_Key,
+//     DataVersion,
+//     DeletionMark,
+//     Predefined,
+//     Code,
+//    Description as "Текущая Должность",
+    Description as "Должность",
+    АУП,
+    КатегорияВоинскогоУчета,
+    КатегорияДолжности_Key,
+    КодЗанятия_Key,
+    ВидДеятельности_Key,
+    Грейд_Key,
+    //Должность_Key,
+    НаименованиеПрофессии,
+    MCC_Архив,
+    MCC_Руководитель_Moco,
+    MCC_Вес_Руководителя_Moco,
+    MCC_НочнойГрафик,
+    КатегорияДолжности@navigationLinkUrl,
+    КодЗанятия@navigationLinkUrl
+FROM [lib://Stage-1/Catalog_ДолжностиОрганизаций.qvd]
+(qvd);

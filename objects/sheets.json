@@ -1,0 +1,377 @@
+[
+  {
+    "qProperty": {
+      "qInfo": {
+        "qId": "44918392-3133-4991-944f-18b118c855d7",
+        "qType": "sheet"
+      },
+      "qMetaDef": {
+        "title": "Мой новый лист",
+        "description": ""
+      },
+      "rank": 0,
+      "thumbnail": {
+        "qStaticContentUrlDef": {}
+      },
+      "columns": 24,
+      "rows": 12,
+      "cells": [
+        {
+          "name": "uuw",
+          "type": "qlik-date-picker",
+          "col": 0,
+          "row": 0,
+          "colspan": 10,
+          "rowspan": 2,
+          "bounds": {
+            "y": 0,
+            "x": 0,
+            "width": 41.66666666666667,
+            "height": 16.666666666666664
+          }
+        },
+        {
+          "name": "QbRYY",
+          "type": "mekkochart",
+          "col": 10,
+          "row": 0,
+          "colspan": 12,
+          "rowspan": 6,
+          "bounds": {
+            "y": 0,
+            "x": 41.66666666666667,
+            "width": 50,
+            "height": 50
+          }
+        }
+      ],
+      "qChildListDef": {
+        "qData": {
+          "title": "/title"
+        }
+      }
+    },
+    "qChildren": [
+      {
+        "qProperty": {
+          "qInfo": {
+            "qId": "uuw",
+            "qType": "qlik-date-picker"
+          },
+          "qMetaDef": {},
+          "qListObjectDef": {
+            "qDef": {
+              "qGrouping": "N",
+              "qFieldDefs": [
+                "Поле_1"
+              ],
+              "qFieldLabels": [],
+              "qSortCriterias": [
+                {
+                  "qSortByNumeric": -1,
+                  "qExpression": {}
+                },
+                {
+                  "qSortByState": 1,
+                  "qExpression": {}
+                }
+              ],
+              "qNumberPresentations": [],
+              "qActiveField": 0,
+              "autoSort": false
+            },
+            "qFrequencyMode": "V",
+            "qShowAlternatives": true,
+            "qInitialDataFetch": [
+              {
+                "qLeft": 0,
+                "qTop": 0,
+                "qWidth": 1,
+                "qHeight": 10000
+              }
+            ],
+            "qExpressions": []
+          },
+          "props": {
+            "isSingleDate": false,
+            "minDate": {
+              "qStringExpression": {
+                "qExpr": "=Min( {1} [Поле_1])"
+              }
+            },
+            "maxDate": {
+              "qStringExpression": {
+                "qExpr": "=Max( {1} [Поле_1])"
+              }
+            },
+            "startDate": {
+              "qStringExpression": {
+                "qExpr": "=Min([Поле_1])"
+              }
+            },
+            "endDate": {
+              "qStringExpression": {
+                "qExpr": "=Max([Поле_1])"
+              }
+            },
+            "CustomRangesEnabled": true,
+            "customRangeLabel": "Range",
+            "today": "Today",
+            "yesterday": "Yesterday",
+            "lastXDays": "Last $ days",
+            "thisMonth": "This Month",
+            "lastMonth": "Last Month",
+            "locale": "en",
+            "format": "YYYY-MM-DD",
+            "separator": " - ",
+            "defaultText": "Select date range"
+          },
+          "advanced": false,
+          "showTitles": true,
+          "title": "",
+          "subtitle": "",
+          "footnote": "",
+          "showDetails": false,
+          "visualization": "qlik-date-picker",
+          "version": 1,
+          "extensionMeta": {
+            "translationKey": "",
+            "icon": "calendar",
+            "iconChar": "puzzle",
+            "isLibraryItem": true,
+            "visible": true,
+            "name": "Date picker",
+            "description": "A calendar object that allows a user to make selections in a date field.\nVersion: 2.14.0",
+            "template": "qlik-date-picker",
+            "iconPath": "M14.5,9 L13,9 L13,3.3 C13,3.1 12.9,3 12.7,3 L8,3 L8,1.5 C8,0.7 7.3,0 6.5,0 C5.7,0 5,0.7 5,1.5 L5,3 L0.3,3 C0.1,3 0,3.1 0,3.3 L0,9 L1.5,9 C2.3,9 3,9.7 3,10.5 C3,11.3 2.3,12 1.5,12 L0,12 L0,15.7 C0,15.9 0.1,16 0.3,16 L5,16 L5,14.5 C5,13.7 5.7,13 6.5,13 C7.3,13 8,13.7 8,14.5 L8,16 L12.7,16 C12.9,16 13,15.9 13,15.7 L13,12 L14.5,12 C15.3,12 16,11.3 16,10.5 C16,9.7 15.3,9 14.5,9 Z",
+            "isThirdParty": true,
+            "type": "visualization",
+            "version": "2.14.0",
+            "preview": "preview.png",
+            "keywords": "qlik-sense, visualization",
+            "author": "Nodier Torres",
+            "homepage": "http://branch.qlik.com/#/project/5697a878dcc497f80ed514bf",
+            "license": "MIT",
+            "repository": "https://github.com/qlik-oss/SenseDateRangePicker/tree/qlik-date-picker",
+            "dependencies": {
+              "qlik-sense": ">=5.5.x"
+            },
+            "bundle": {
+              "id": "qlik-dashboard-bundle",
+              "name": "Qlik Dashboard bundle",
+              "description": "This is a set of supported objects that will facilitate dashboard creation in Qlik Sense: A navigation button, a date picker, a slider, a demand-reporting button and a share button. These can be used in addition to the objects found under \"Charts\".\n\nFor limitations and support conditions, see the documentation."
+            },
+            "installer": "QlikExtensionBundler",
+            "previewIconURL": "https://dev.datanomix.pro/sso/extensions/qlik-date-picker/preview.png"
+          }
+        },
+        "qChildren": []
+      },
+      {
+        "qProperty": {
+          "qInfo": {
+            "qId": "QbRYY",
+            "qType": "mekkochart"
+          },
+          "qMetaDef": {},
+          "qHyperCubeDef": {
+            "qDimensions": [
+              {
+                "qLibraryId": "HAPjCK",
+                "qDef": {
+                  "qGrouping": "N",
+                  "qFieldDefs": [],
+                  "qFieldLabels": [],
+                  "qSortCriterias": [
+                    {
+                      "qSortByNumeric": 1,
+                      "qSortByAscii": 1,
+                      "qSortByLoadOrder": 1,
+                      "qExpression": {}
+                    }
+                  ],
+                  "qNumberPresentations": [],
+                  "qActiveField": 0,
+                  "autoSort": true,
+                  "cId": "JxYsKx",
+                  "othersLabel": "Другие"
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {
+                    "qv": "10"
+                  },
+                  "qOtherLimit": {
+                    "qv": "0"
+                  },
+                  "qOtherLimitMode": "OTHER_GE_LIMIT",
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qOtherLabel": {
+                  "qv": "Другие"
+                },
+                "qTotalLabel": {},
+                "qCalcCond": {},
+                "qAttributeExpressions": [],
+                "qAttributeDimensions": [],
+                "qCalcCondition": {
+                  "qCond": {},
+                  "qMsg": {}
+                }
+              },
+              {
+                "qLibraryId": "vQzns",
+                "qDef": {
+                  "qGrouping": "N",
+                  "qFieldDefs": [],
+                  "qFieldLabels": [],
+                  "qSortCriterias": [
+                    {
+                      "qSortByNumeric": 1,
+                      "qSortByAscii": 1,
+                      "qSortByLoadOrder": 1,
+                      "qExpression": {}
+                    }
+                  ],
+                  "qNumberPresentations": [],
+                  "qActiveField": 0,
+                  "autoSort": true,
+                  "cId": "qWjjvGA",
+                  "othersLabel": "Другие"
+                },
+                "qOtherTotalSpec": {
+                  "qOtherMode": "OTHER_OFF",
+                  "qOtherCounted": {
+                    "qv": "10"
+                  },
+                  "qOtherLimit": {
+                    "qv": "0"
+                  },
+                  "qOtherLimitMode": "OTHER_GE_LIMIT",
+                  "qForceBadValueKeeping": true,
+                  "qApplyEvenWhenPossiblyWrongResult": true,
+                  "qOtherSortMode": "OTHER_SORT_DESCENDING",
+                  "qTotalMode": "TOTAL_OFF",
+                  "qReferencedExpression": {}
+                },
+                "qOtherLabel": {
+                  "qv": "Другие"
+                },
+                "qTotalLabel": {},
+                "qCalcCond": {},
+                "qAttributeExpressions": [],
+                "qAttributeDimensions": [],
+                "qCalcCondition": {
+                  "qCond": {},
+                  "qMsg": {}
+                }
+              }
+            ],
+            "qMeasures": [
+              {
+                "qLibraryId": "NraEUbD",
+                "qDef": {
+                  "qTags": [],
+                  "qGrouping": "N",
+                  "qNumFormat": {
+                    "qType": "U",
+                    "qnDec": 10,
+                    "qUseThou": 0
+                  },
+                  "qAccumulate": 0,
+                  "qActiveExpression": 0,
+                  "qExpressions": [],
+                  "autoSort": true,
+                  "cId": "PnjMm",
+                  "numFormatFromTemplate": true
+                },
+                "qSortBy": {
+                  "qSortByNumeric": -1,
+                  "qSortByLoadOrder": 1,
+                  "qExpression": {}
+                },
+                "qAttributeExpressions": [],
+                "qAttributeDimensions": [],
+                "qCalcCond": {},
+                "qCalcCondition": {
+                  "qCond": {},
+                  "qMsg": {}
+                },
+                "qTrendLines": []
+              }
+            ],
+            "qInterColumnSortOrder": [
+              0,
+              1,
+              2
+            ],
+            "qSuppressZero": true,
+            "qSuppressMissing": true,
+            "qInitialDataFetch": [
+              {
+                "qLeft": 0,
+                "qTop": 0,
+                "qWidth": 3,
+                "qHeight": 3333
+              }
+            ],
+            "qReductionMode": "N",
+            "qMode": "S",
+            "qPseudoDimPos": -1,
+            "qNoOfLeftDims": -1,
+            "qMaxStackedCells": 5000,
+            "qCalcCond": {},
+            "qTitle": {},
+            "qCalcCondition": {
+              "qCond": {},
+              "qMsg": {}
+            },
+            "qColumnOrder": [],
+            "qExpansionState": [],
+            "qLayoutExclude": {
+              "qHyperCubeDef": {
+                "qDimensions": [],
+                "qMeasures": [],
+                "qInterColumnSortOrder": [],
+                "qInitialDataFetch": [],
+                "qReductionMode": "N",
+                "qMode": "S",
+                "qPseudoDimPos": -1,
+                "qNoOfLeftDims": -1,
+                "qMaxStackedCells": 5000,
+                "qCalcCond": {},
+                "qTitle": {},
+                "qCalcCondition": {
+                  "qCond": {},
+                  "qMsg": {}
+                },
+                "qColumnOrder": [],
+                "qExpansionState": []
+              }
+            }
+          },
+          "showTitles": true,
+          "title": "",
+          "subtitle": "",
+          "footnote": "",
+          "showDetails": false,
+          "cellColor": {
+            "byDimension": {},
+            "mode": "auto",
+            "legend": {
+              "show": "auto",
+              "showTitle": true
+            }
+          },
+          "visualization": "mekkochart",
+          "version": "1.0.0"
+        },
+        "qChildren": []
+      }
+    ]
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "qInfo": {
+      "qId": "KJKfPQ",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Mera1",
+      "qDef": "12",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Mera1",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "NraEUbD",
+      "qType": "measure"
+    },
+    "qMeasure": {
+      "qLabel": "Mera2",
+      "qDef": "23",
+      "qGrouping": "N",
+      "qExpressions": [],
+      "qActiveExpression": 0,
+      "coloring": {}
+    },
+    "qMetaDef": {
+      "title": "Mera2",
+      "description": "",
+      "tags": []
+    }
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "qInfo": {
+      "qId": "HAPjCK",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Поле_1.autoCalendar.Quarter"
+      ],
+      "qFieldLabels": [
+        "Поле_1.Quarter"
+      ],
+      "title": "Поле_1.Quarter",
+      "coloring": {
+        "changeHash": "0.6073615591365837"
+      }
+    },
+    "qMetaDef": {
+      "title": "Поле_1.Quarter",
+      "description": "",
+      "tags": []
+    }
+  },
+  {
+    "qInfo": {
+      "qId": "vQzns",
+      "qType": "dimension"
+    },
+    "qDim": {
+      "qGrouping": "N",
+      "qFieldDefs": [
+        "Поле_1.autoCalendar.Week"
+      ],
+      "qFieldLabels": [
+        "Поле_1.Week"
+      ],
+      "title": "Поле_1.Week",
+      "coloring": {
+        "changeHash": "0.14128635027497638"
+      }
+    },
+    "qMetaDef": {
+      "title": "Поле_1.Week",
+      "description": "",
+      "tags": []
+    }
+  }
+]

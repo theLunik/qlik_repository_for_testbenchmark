@@ -1,0 +1,40 @@
+{
+  "qInfos": [
+    {
+      "qId": "44918392-3133-4991-944f-18b118c855d7",
+      "qType": "sheet"
+    },
+    {
+      "qId": "65d2c2bd-ad2d-48f4-a7ef-73a6fa47d57d",
+      "qType": "appprops"
+    },
+    {
+      "qId": "HAPjCK",
+      "qType": "dimension"
+    },
+    {
+      "qId": "KJKfPQ",
+      "qType": "measure"
+    },
+    {
+      "qId": "LoadModel",
+      "qType": "LoadModel"
+    },
+    {
+      "qId": "NraEUbD",
+      "qType": "measure"
+    },
+    {
+      "qId": "QbRYY",
+      "qType": "mekkochart"
+    },
+    {
+      "qId": "uuw",
+      "qType": "qlik-date-picker"
+    },
+    {
+      "qId": "vQzns",
+      "qType": "dimension"
+    }
+  ]
+}
